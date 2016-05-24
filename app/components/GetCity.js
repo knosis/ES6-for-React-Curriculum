@@ -1,13 +1,12 @@
-var React = require('react');
-var PropTypes = React.PropTypes;
+import React, { PropTypes }  from 'react'
 
-function Button (props) {
+function Button ({ onSubmitCity, children }) {
   return (
     <button type='button'
       style={{margin: 10}}
       className='btn btn-success'
-      onClick={props.onSubmitCity}>
-        {props.children}
+      onClick={onSubmitCity}>
+        {children}
     </button>
   )
 }
@@ -55,4 +54,4 @@ GetCity.propTypes = {
   city: PropTypes.string.isRequired
 }
 
-module.exports = GetCity;
+export default GetCity
